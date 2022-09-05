@@ -8,6 +8,6 @@ app.listen(8001, function () {
 
 app.use(express.static(path.join(__dirname, "chat/build")))
 
-app.get("/", (req, res) => {
+app.get("/main", (req, res) => {
 	res.sendFile(path.join(__dirname, "/chat/build/index.html"))
 })
