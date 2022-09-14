@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "create-react-app": "^5.0.1",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
     "mysql": "^2.18.1"
   }
 }
