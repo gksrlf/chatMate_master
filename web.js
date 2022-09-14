@@ -10,6 +10,8 @@ app.listen(8001, function () {
 })
 
 app.use(express.static(path.join(__dirname, "chat/build")))
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "/chat/build/index.html"))
@@ -26,9 +28,9 @@ app.get("/test", (req, res) => {
 	)
 })
 
-app.get("/login", (req, res) => {
-	const id = req.query.id ? req.query.id : ""
-	const pw = req.query.pw ? req.query.pw : ""
+app.post("/login", (req, res) => {
+	const id = req.body.id ? req.body.id : ""
+	const pw = req.body.pw ? req.body.pw : ""
 	let data = {
 		success: 0,
 		msg: "",
@@ -58,7 +60,6 @@ app.get("/code", (req, res) => {
 		nextCode: "",
 		nextText: "",
 	}
-	console.log(req.query.code)
 	if (req.query.code == undefined) {
 		conn.query(
 			`SELECT * FROM memberQuestion LIMIT 3`,
