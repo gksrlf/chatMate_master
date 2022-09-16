@@ -1,4 +1,5 @@
-const mysql = require("mysql")
+const mysql = require("mysql2/promise")
+const logger = require("../winston.js")
 const db_info = {
 	host: "nodejs-014.cafe24.com",
 	port: "3306",
@@ -7,14 +8,19 @@ const db_info = {
 	database: "gksrlf7895",
 }
 
+const connection = mysql.createPool(db_info)
+
+const connect = connection.getConnection((err) => {
+	if (err) logger.error("mysql connection error : " + err)
+	else logger.info("mysql is connected successfully!")
+})
+
+const release = () => {
+	connect.release()
+}
+
 module.exports = {
-	init: function () {
-		return mysql.createConnection(db_info)
-	},
-	connect: function (conn) {
-		conn.connect(function (err) {
-			if (err) console.error("mysql connection error : " + err)
-			else console.log("mysql is connected successfully!")
-		})
-	},
+	connect,
+	connection,
+	release,
 }
