@@ -1,0 +1,48 @@
+2022-09-16 14:18:41 [chatMate] info: 로그인 성공
+2022-09-16 14:23:13 [chatMate] info: 로그인 성공
+2022-09-16 14:23:22 [chatMate] info: 로그인 성공
+2022-09-16 15:22:39 [chatMate] warn: [Check] LoginCheck result : False
+2022-09-16 15:22:50 [chatMate] error: [Request] Error!! login ID, PW Null!!!
+2022-09-16 15:23:29 [chatMate] info: [DB] Login Success !!!
+2022-09-16 15:23:36 [chatMate] info: [Check] LoginCheck result : Success
+2022-09-16 15:38:45 [chatMate] warn: [Check] LoginCheck result : False
+2022-09-16 15:38:48 [chatMate] info: [DB] Login Success !!!
+2022-09-16 15:38:51 [chatMate] info: [LogOut] Log Out Success!!
+2022-09-16 15:39:18 [chatMate] warn: [Check] LoginCheck result : False
+2022-09-16 15:39:21 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:40:44 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:41:42 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:41:46 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:41:48 [chatMate] warn: [Check] LoginCheck result : False
+2022-09-16 15:41:50 [chatMate] info: [DB] Login Success !!!
+2022-09-16 15:41:52 [chatMate] info: [Check] LoginCheck result : Success
+2022-09-16 15:41:57 [chatMate] info: [LogOut] Log Out Success!!
+2022-09-16 15:42:01 [chatMate] warn: [Check] LoginCheck result : False
+2022-09-16 15:43:00 [chatMate] warn: [Check] LoginCheck result : False
+2022-09-16 15:43:02 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:43:05 [chatMate] info: [DB] Login Success !!!
+2022-09-16 15:43:06 [chatMate] info: [Check] LoginCheck result : Success
+2022-09-16 15:43:08 [chatMate] info: [LogOut] Log Out Success!!
+2022-09-16 15:43:10 [chatMate] warn: [Check] LoginCheck result : False
+2022-09-16 15:44:28 [chatMate] info: [DB] Login Success !!!
+2022-09-16 15:44:31 [chatMate] info: [Check] LoginCheck result : Success
+2022-09-16 15:44:33 [chatMate] info: [LogOut] Log Out Success!!
+2022-09-16 16:57:45 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:07 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:17 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:43 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:43 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 16:59:19 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:59:19 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 16:59:55 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:59:55 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 17:00:24 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 17:00:24 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 17:01:34 [chatMate] info: [DB] QnAList DB Success!!
+2022-09-16 17:01:58 [chatMate] info: [DB] QnAList DB Success!!
+2022-09-16 17:02:10 [chatMate] info: [DB] QnAList DB Success!!
+2022-09-16 17:03:27 [chatMate] info: [DB] QnAList DB Success!!
+2022-09-16 17:03:35 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: req is not defined
+2022-09-16 17:03:35 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>asdf
+2022-09-16 17:03:43 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: req is not defined
+2022-09-16 17:03:43 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>asdfasdf

@@ -1,0 +1,21 @@
+2022-09-16 15:22:50 [chatMate] error: [Request] Error!! login ID, PW Null!!!
+2022-09-16 15:39:21 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:40:44 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:41:42 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:41:46 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 15:43:02 [chatMate] error: [LogOut] Error!! Not Login !! Session & Cookie is Null!!
+2022-09-16 16:57:45 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:07 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:17 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:43 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:58:43 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 16:59:19 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:59:19 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 16:59:55 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 16:59:55 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 17:00:24 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: rows is not defined
+2022-09-16 17:00:24 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>undefined
+2022-09-16 17:03:35 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: req is not defined
+2022-09-16 17:03:35 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>asdf
+2022-09-16 17:03:43 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: req is not defined
+2022-09-16 17:03:43 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>asdfasdf

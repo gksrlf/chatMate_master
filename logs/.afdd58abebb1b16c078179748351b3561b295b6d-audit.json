@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\node\\chatemate_master\\logs\\.afdd58abebb1b16c078179748351b3561b295b6d-audit.json",
+    "files": [
+        {
+            "date": 1663305511728,
+            "name": "C:\\node\\chatemate_master\\logs\\2022-09-16.log",
+            "hash": "edbbb32368da9a8abf9043edf728b0ec1be73ebd42d12fc19b2921d3555d9ec7"
+        }
+    ],
+    "hashType": "sha256"
+}
