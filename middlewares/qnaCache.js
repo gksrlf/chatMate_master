@@ -1,5 +1,6 @@
 const qnaUtils = require("../utils/qnaUtils")
 const logger = require("../winston.js")
+const axios = require("axios")
 
 const getQnaListCache = async (req, res, next) => {
 	const code = req.query.code
@@ -13,6 +14,7 @@ const getQnaListCache = async (req, res, next) => {
 	}
 }
 
+const getAiCache = async (req, res, next) => {}
 module.exports = {
 	getQnaListCache,
 }

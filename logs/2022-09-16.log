@@ -46,3 +46,8 @@
 2022-09-16 17:03:35 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>asdf
 2022-09-16 17:03:43 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: req is not defined
 2022-09-16 17:03:43 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>asdfasdf
+2022-09-16 17:04:15 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: req is not defined
+2022-09-16 17:04:15 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>asdfasdf
+2022-09-16 17:04:20 [chatMate] error: [qnaUtils] Error!! qnaUtils MySql Error!! ===>ReferenceError: req is not defined
+2022-09-16 17:04:20 [chatMate] error: [DB] Error!! qnaListController No Rows!! ===>
+2022-09-16 17:04:26 [chatMate] info: [DB] QnAList DB Success!!
