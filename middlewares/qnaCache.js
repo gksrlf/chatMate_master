@@ -8,7 +8,8 @@ const getQnaListCache = async (req, res, next) => {
 		req.body.msg = 0
 		next()
 	} else {
-		logger.info("[DB] QnAList DB Success!!")
+		// logger.info("[DB] QnAList DB Success!!")
+		console.log("[DB] QnAList DB Success!!")
 		res.status(200).json(qnaList)
 	}
 }
@@ -19,7 +20,8 @@ const getAiCache = async (req, res, next) => {
 	}
 	try {
 		if (data.question == "") {
-			logger.warn(
+			// logger.warn("[Ai] Warn!! Ai request text is Null!!! ===>" + data.question)
+			console.log(
 				"[Ai] Warn!! Ai request text is Null!!! ===>" + data.question
 			)
 		}
@@ -30,7 +32,8 @@ const getAiCache = async (req, res, next) => {
 		req.body.msg = result.data
 		next()
 	} catch (err) {
-		logger.error("[Server] Error!! aiServer error!!! ===>" + err)
+		// logger.error("[Server] Error!! aiServer error!!! ===>" + err)
+		console.log("[Server] Error!! aiServer error!!! ===>" + err)
 		req.body.msg = 0
 		next()
 	}
