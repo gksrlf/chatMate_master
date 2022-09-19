@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "D:\\GitHub\\ChatMate\\server\\logs\\.1790f1a727e78769f47c28290d98a2c88812cdb0-audit.json",
+    "files": [
+        {
+            "date": 1663483749082,
+            "name": "D:\\GitHub\\ChatMate\\server\\logs\\2022-09-18.log",
+            "hash": "7c8d73afdb8a0a8193aac56f4da1a17baa7087484e94f5ec5d5504e4dfe99492"
+        }
+    ],
+    "hashType": "sha256"
+}
