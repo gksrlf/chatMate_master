@@ -24,6 +24,19 @@ const release = () => {
 	connect.release()
 }
 
+function handleDisconnect() {
+	connection.on("error", (err) => {
+		console.log("db error", err)
+		if (err.code === "PROTOCOL_CONNECTION_LOST") {
+			return handleDisconnect()
+		} else {
+			throw err
+		}
+	})
+}
+
+handleDisconnect()
+
 module.exports = {
 	connect,
 	connection,
