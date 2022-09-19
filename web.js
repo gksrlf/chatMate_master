@@ -30,6 +30,6 @@ app.get("/", async (req, res) => {
 	res.sendFile(path.join(__dirname, "/chat/build/index.html"))
 })
 
-app.listen(8001, function () {
-	console.log("listening on 8001")
-})
+// app.listen(8001, function () {
+// 	console.log("listening on 8001")
+// })
