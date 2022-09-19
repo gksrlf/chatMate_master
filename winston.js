@@ -31,7 +31,8 @@ const logger = winston.createLogger({
 		new winstonDaily({
 			level: "info", // info 레벨에선
 			datePattern: "YYYY-MM-DD", // 파일 날짜 형식
-			dirname: logDir, // 파일 경로
+			// cafe24에서는 파일 읽고쓰기 권한없으므로 주석처리..
+			// dirname: logDir, // 파일 경로
 			filename: `%DATE%.log`, // 파일 이름
 			maxFiles: 30, // 최근 30일치 로그 파일을 남김
 			zippedArchive: true,
