@@ -11,8 +11,13 @@ const db_info = {
 const connection = mysql.createPool(db_info)
 
 const connect = connection.getConnection((err) => {
-	if (err) logger.error("mysql connection error : " + err)
-	else logger.info("mysql is connected successfully!")
+	if (err) {
+		logger.error("mysql connection error : " + err)
+		console.log("mysql connection error : " + err)
+	} else {
+		logger.info("mysql is connected successfully!")
+		console.log("mysql is connected successfully!")
+	}
 })
 
 const release = () => {
