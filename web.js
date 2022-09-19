@@ -13,7 +13,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 // cookie and session assign middleWare
 app.use(cookieParser())
-// 세션 세팅
+
+// session set
 app.use(
 	expressSession({
 		secret: "my key",
@@ -22,10 +23,13 @@ app.use(
 	})
 )
 
+// login router
 app.use("/login", loginRouter)
 
+// qna router
 app.use("/code", qnaRouter)
 
+// react index file render
 app.get("/", async (req, res) => {
 	res.sendFile(path.join(__dirname, "/chat/index.html"))
 })
