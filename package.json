@@ -4,16 +4,21 @@
   "description": "",
   "main": "web.js",
   "scripts": {
+    "start": "node web.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "cookie-parser": "^1.4.6",
     "create-react-app": "^5.0.1",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
   }
 }

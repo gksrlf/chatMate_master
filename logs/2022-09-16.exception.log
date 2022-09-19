@@ -1,0 +1,31 @@
+2022-09-16 15:38:51 [chatMate] error: uncaughtException: Invalid status code: 1
+RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 1
+    at new NodeError (internal/errors.js:322:7)
+    at ServerResponse.writeHead (_http_server.js:259:11)
+    at ServerResponse.writeHead (C:\node\chatemate_master\node_modules\on-headers\index.js:44:26)
+    at ServerResponse._implicitHeader (_http_server.js:250:8)
+    at ServerResponse.end (_http_outgoing.js:837:10)
+    at ServerResponse.end (C:\node\chatemate_master\node_modules\express-session\index.js:325:21)
+    at ServerResponse.send (C:\node\chatemate_master\node_modules\express\lib\response.js:232:10)
+    at Immediate._onImmediate (C:\node\chatemate_master\controller\loginController.js:36:14)
+    at processImmediate (internal/timers.js:464:21)
+2022-09-16 15:39:21 [chatMate] error: uncaughtException: Invalid status code: 0
+RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 0
+    at new NodeError (internal/errors.js:322:7)
+    at ServerResponse.writeHead (_http_server.js:259:11)
+    at ServerResponse.writeHead (C:\node\chatemate_master\node_modules\on-headers\index.js:44:26)
+    at ServerResponse._implicitHeader (_http_server.js:250:8)
+    at ServerResponse.end (_http_outgoing.js:837:10)
+    at writeend (C:\node\chatemate_master\node_modules\express-session\index.js:262:22)
+    at Immediate.onsave [as _onImmediate] (C:\node\chatemate_master\node_modules\express-session\index.js:340:11)
+    at processImmediate (internal/timers.js:464:21)
+2022-09-16 15:40:44 [chatMate] error: uncaughtException: Invalid status code: 0
+RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 0
+    at new NodeError (internal/errors.js:322:7)
+    at ServerResponse.writeHead (_http_server.js:259:11)
+    at ServerResponse.writeHead (C:\node\chatemate_master\node_modules\on-headers\index.js:44:26)
+    at ServerResponse._implicitHeader (_http_server.js:250:8)
+    at ServerResponse.end (_http_outgoing.js:837:10)
+    at writeend (C:\node\chatemate_master\node_modules\express-session\index.js:262:22)
+    at Immediate.onsave [as _onImmediate] (C:\node\chatemate_master\node_modules\express-session\index.js:340:11)
+    at processImmediate (internal/timers.js:464:21)
