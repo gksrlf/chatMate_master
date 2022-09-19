@@ -11,13 +11,31 @@ const db_info = {
 const connection = mysql.createPool(db_info)
 
 const connect = connection.getConnection((err) => {
-	if (err) logger.error("mysql connection error : " + err)
-	else logger.info("mysql is connected successfully!")
+	if (err) {
+		// logger.error("mysql connection error : " + err)
+		console.log("mysql connection error : " + err)
+	} else {
+		// logger.info("mysql is connected successfully!")
+		console.log("mysql is connected successfully!")
+	}
 })
 
 const release = () => {
 	connect.release()
 }
+
+function handleDisconnect() {
+	connection.on("error", (err) => {
+		console.log("db error", err)
+		if (err.code === "PROTOCOL_CONNECTION_LOST") {
+			return handleDisconnect()
+		} else {
+			throw err
+		}
+	})
+}
+
+handleDisconnect()
 
 module.exports = {
 	connect,

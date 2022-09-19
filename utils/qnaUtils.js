@@ -16,7 +16,8 @@ const getQNA = async (code) => {
 			return rows
 		}
 	} catch (err) {
-		logger.error("[qnaUtils] Error!! qnaUtils MySql Error!! ===>" + err)
+		// logger.error("[qnaUtils] Error!! qnaUtils MySql Error!! ===>" + err)
+		console.log("[qnaUtils] Error!! qnaUtils MySql Error!! ===>" + err)
 	}
 }
 

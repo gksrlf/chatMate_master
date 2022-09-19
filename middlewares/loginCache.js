@@ -34,7 +34,8 @@ const loginCache = async (req, res, next) => {
 			}
 			// cookie set
 			res.cookie("autoLogin", "1")
-			logger.info("[DB] Login Success !!!")
+			// logger.info("[DB] Login Success !!!")
+			console.log("[DB] Login Success !!!")
 			res.status(200).send("1")
 			break
 	}
@@ -44,10 +45,12 @@ const loginCheckCache = (req, res, next) => {
 	req.body.msg = "0"
 	// session & cookie check
 	if (req.session.user && req.cookies.autoLogin) {
-		logger.info("[Check] LoginCheck result : Success")
+		// logger.info("[Check] LoginCheck result : Success")
+		console.log("[Check] LoginCheck result : Success")
 		req.body.msg = "1"
 	} else {
-		logger.warn("[Check] LoginCheck result : False")
+		// logger.warn("[Check] LoginCheck result : False")
+		console.log("[Check] LoginCheck result : False")
 		req.body.msg = "0"
 	}
 	next()
