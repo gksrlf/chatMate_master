@@ -14,7 +14,7 @@ const getQNA = async (code) => {
 			return rows
 		} else {
 			const [rows, fields] = await conn.query(
-				`SELECT * FROM memberQuestion where code='${req.query.code}'`
+				`SELECT * FROM memberQuestion where code='${code}'`
 			)
 			connect.release
 			return rows
@@ -29,7 +29,7 @@ const getQNA = async (code) => {
 const getInquiryHistoryList = async (memNo) => {
 	try {
 		const [rows, fields] = await conn.query(
-			`SELECT * FROM getInquiryHistoryList WHERE memNo = ${memNo}`
+			`SELECT * FROM inquiryHistory WHERE memNo = ${memNo}`
 		)
 		connect.release
 		return rows

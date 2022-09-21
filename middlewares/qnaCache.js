@@ -77,7 +77,7 @@ const getInquiryHistoryCache = async (req, res, next) => {
 	const list = await qnaUtils.getInquiryHistoryList(memNo)
 
 	//list null
-	if (list.length == 0) {
+	if (list == 0) {
 		req.body.msg = "-2"
 		next()
 	} else {
