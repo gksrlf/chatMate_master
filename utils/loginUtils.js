@@ -28,7 +28,8 @@ const login = async (id, pw) => {
 		}
 		connect.release
 	} catch (err) {
-		logger.error("[LoginUtils] Error!! loginUtils MySql Error!!" + err)
+		// logger.error("[LoginUtils] Error!! loginUtils MySql Error!!" + err)
+		console.log("[LoginUtils] Error!! loginUtils MySql Error!!" + err)
 		//error
 		data.result = -1
 		connect.release
