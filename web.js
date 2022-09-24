@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const cors = require("cors");
 // const db_config = require(__dirname + "/config/database.js")
 // const conn = db_config.init()
 const expressSession = require("express-session");
@@ -21,6 +22,8 @@ app.use(
     saveUninitialized: true,
   })
 );
+
+app.use(cors({ origin: "*", credentials: true }));
 
 app.use("/login", loginRouter);
 
