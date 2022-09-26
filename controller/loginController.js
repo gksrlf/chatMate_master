@@ -41,8 +41,27 @@ const logOutController = (req, res) => {
 		return res.status(200).send(data)
 	})
 }
+
+const getmemberController = (req, res) => {
+	const data = req.body.msg
+	const memNo = req.query.memNo.toString()
+	// noLogin Error
+	if (data === "-1") {
+		console.log(
+			"[getMember] Error!! not Login !! Session & Cookie is Null!!"
+		)
+		return res.status(400).send(data)
+	}
+
+	// DB null
+	if (data === "0") {
+		console.log("[getMember] Error!! member is Null!!!")
+		return res.status(400).send(memNo)
+	}
+}
 module.exports = {
 	loginController,
 	loginCheckController,
 	logOutController,
+	getmemberController,
 }

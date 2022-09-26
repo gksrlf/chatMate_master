@@ -21,10 +21,10 @@ const login = async (id, pw) => {
 		} else {
 			// success
 			data.result = 1
-			data.no = rows.NO
-			data.id = rows.id
-			data.pw = rows.pw
-			data.nick = rows.nick
+			data.no = rows[0].NO
+			data.id = rows[0].id
+			data.pw = rows[0].pw
+			data.nick = rows[0].nick
 		}
 		connect.release
 	} catch (err) {
@@ -37,6 +37,22 @@ const login = async (id, pw) => {
 	return data
 }
 
+const getMember = async (memNo) => {
+	try {
+		const [rows, fields] = await conn.query(
+			`SELECT * FROM member WHERE No = ${memNo}`
+		)
+		connect.release
+		return rows
+	} catch (err) {
+		//error
+		console.log("[LoginUtils] Error!! loginUtils getMember Error!!" + err)
+		connect.release
+		return "-1"
+	}
+}
+
 module.exports = {
 	login,
+	getMember,
 }
