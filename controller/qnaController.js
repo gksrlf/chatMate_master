@@ -9,7 +9,7 @@ const getQnaListController = async (req, res) => {
 	if (data == 0) {
 		// logger.error("[DB] Error!! qnaListController No Rows!! ===>" + code)
 		console.log("[DB] Error!! qnaListController No Rows!! ===>" + code)
-		return res.status(400).send("0")
+		return res.status(200).send("0")
 	}
 }
 
@@ -20,7 +20,7 @@ const getAiController = async (req, res) => {
 	// ai Server Error No return data
 	if (data == 0) {
 		return res
-			.status(500)
+			.status(200)
 			.send(
 				"회원님 접수해 주신 내용만으로 문의 사항을 정확히 파악할 수 없는 점 양해 부탁드립니다 좀 더 자세히 접수해 주시면 확인 후 즉시 답변드리도록 하겠습니다"
 			)
@@ -36,7 +36,7 @@ const getInquiryHistoryController = async (req, res) => {
 	// memNo is Null
 	if (data === "0") {
 		console.log("[Parameter] Error!! inquiryHistory memNo is Null!!!")
-		return res.status(400).send(data)
+		return res.status(200).send(data)
 	}
 
 	// list is Null
@@ -54,13 +54,13 @@ const getSingleInquiryController = async (req, res) => {
 	// No is Null
 	if (data == "0") {
 		console.log("[Parameter] Error!! getSingleInquiry No is Null!!!")
-		return res.status(400).send(data)
+		return res.status(200).send(data)
 	}
 
 	// list is Null
 	if (data == "-2") {
 		console.log("[DB] Error!! getSingleInquiry No Rows!!!===>" + No)
-		return res.status(400).send(data)
+		return res.status(200).send(data)
 	}
 }
 
@@ -75,13 +75,13 @@ const setInquiryController = async (req, res) => {
 			"[Parameter] Error!! setInquiryController Data is undefined!! ===>" +
 				member
 		)
-		return res.status(400).send(data)
+		return res.status(200).send(data)
 	}
 
 	// qnaUtils.setInquiry DB Error
 	if (data == "-2") {
 		console.log("[DB] Error!! setInquiryController DB INSERT Error!!!")
-		return res.status(500).send(data)
+		return res.status(200).send(data)
 	}
 }
 module.exports = {
