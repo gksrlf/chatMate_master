@@ -11,6 +11,7 @@ const loginCache = async (req, res, next) => {
 		next()
 	}
 
+	//DB Call
 	const login = await loginUtils.login(id, pw)
 
 	switch (login.result) {
@@ -36,7 +37,7 @@ const loginCache = async (req, res, next) => {
 			res.cookie("autoLogin", "1")
 			// logger.info("[DB] Login Success !!!")
 			console.log("[DB] Login Success !!!")
-			res.status(200).send("1")
+			res.status(200).json(login)
 			break
 	}
 }
@@ -65,8 +66,30 @@ const logOutCache = (req, res, next) => {
 	next()
 }
 
+const getMemberCache = async (req, res, next) => {
+	const memNo = req.query.memNo ? req.query.memNo : 0
+	const noLogin = "-1"
+	// login check
+	if (!req.session.user) {
+		req.body.msg = noLogin
+		next()
+	}
+
+	//DB Call
+	const member = await loginUtils.getMember(memNo)
+
+	if (member.length == 0) {
+		req.body.msg = "0"
+		next()
+	} else {
+		console.log("[getMember] member Inquiry Success")
+		return res.status(200).json(member)
+	}
+}
+
 module.exports = {
 	loginCache,
 	loginCheckCache,
 	logOutCache,
+	getMemberCache,
 }

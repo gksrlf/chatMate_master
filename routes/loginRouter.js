@@ -13,4 +13,9 @@ router.get(
 
 router.get("/logout", loginCache.logOutCache, loginController.logOutController)
 
+router.get(
+	"/getmember",
+	loginCache.getMemberCache,
+	loginController.getmemberController
+)
 module.exports = router
