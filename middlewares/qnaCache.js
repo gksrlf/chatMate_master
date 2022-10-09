@@ -63,9 +63,9 @@ const getInquiryHistoryCache = async (req, res, next) => {
   const memNo = req.body.memNo ? req.body.memNo : 0;
   const noLogin = "-1";
   // login check
-  if (!req.session.user) {
-    return res.status(200).send(noLogin);
-  }
+  // if (!req.session.user) {
+  //   return res.status(200).send(noLogin);
+  // }
 
   if (memNo == 0) {
     req.body.msg = "0";

@@ -2,7 +2,6 @@ const loginUtils = require("../utils/loginUtils");
 const logger = require("../winston.js");
 
 const loginCache = async (req, res, next) => {
-  console.log(req.body);
   const id = req.body.id ? req.body.id : "";
   const pw = req.body.pw ? req.body.pw : "";
 

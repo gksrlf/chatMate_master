@@ -24,6 +24,12 @@ const getAiController = async (req, res) => {
       .send(
         "회원님 접수해 주신 내용만으로 문의 사항을 정확히 파악할 수 없는 점 양해 부탁드립니다 좀 더 자세히 접수해 주시면 확인 후 즉시 답변드리도록 하겠습니다"
       );
+  } else if (data == -1) {
+    return res
+      .status(500)
+      .send(
+        "서버 문제로 인해 답변을 드릴 수 없습니다. 빠른 시일내에 복구하도록 하겠습니다."
+      );
   }
   return res.status(200).send(req.body.msg.answer);
 };
