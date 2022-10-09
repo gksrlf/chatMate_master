@@ -29,4 +29,10 @@ router.post(
 	qnaController.setInquiryController
 )
 
+router.get(
+	"/scoreIns",
+	qnaCache.setScoreCache,
+	qnaController.setScoreController
+)
+
 module.exports = router
