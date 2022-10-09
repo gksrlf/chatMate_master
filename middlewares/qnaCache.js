@@ -144,10 +144,33 @@ const setInquiryCache = async (req, res, next) => {
 	}
 }
 
+// History score insert
+const setScoreCache = async (req, res) => {
+	const noLogin = "-1"
+
+	// login check
+	if (!req.session.user) {
+		return res.status(200).send(noLogin)
+	}
+	const data = {
+		No: req.query.No ? req.query.No : 0,
+		score: req.query.score ? req.query.score : 0,
+	}
+
+	const setScore = await qnaUtils.setScore(data)
+	if (setScore === "1") {
+		return res.status(200).send(setScore)
+	} else {
+		req.body.msg = setScore
+		next()
+	}
+}
+
 module.exports = {
 	getQnaListCache,
 	getAiCache,
 	getInquiryHistoryCache,
 	getSingleInquiryCache,
 	setInquiryCache,
+	setScoreCache,
 }

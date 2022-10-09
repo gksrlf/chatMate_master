@@ -84,10 +84,30 @@ const setInquiryController = async (req, res) => {
 		return res.status(200).send(data)
 	}
 }
+
+// History score insert
+const setScoreController = async (req, res) => {
+	const data = req.body.msg
+
+	// DB Error
+	if (data === "2") {
+		return res.status(200).send(data)
+	} else {
+		// unKnown Error!!
+		console.log(
+			"[unKnown Error] Error!! unKnown Error!! ===>" +
+				req.query.No +
+				"@@" +
+				req.query.score
+		)
+		return res.status(200).send("-10")
+	}
+}
 module.exports = {
 	getQnaListController,
 	getAiController,
 	getInquiryHistoryController,
 	getSingleInquiryController,
 	setInquiryController,
+	setScoreController,
 }
