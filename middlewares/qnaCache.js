@@ -9,9 +9,9 @@ const getQnaListCache = async (req, res, next) => {
   const noLogin = "-1";
 
   // login check
-  // if (req.session.user) {
-  // 	return res.status(200).send(noLogin)
-  // }
+  if (req.session.user) {
+    return res.status(200).send(noLogin);
+  }
 
   if (qnaList == null) {
     req.body.msg = 0;
@@ -31,9 +31,9 @@ const getAiCache = async (req, res, next) => {
   const noLogin = "-1";
   try {
     // login check
-    // if (!req.session.user) {
-    // 	return res.status(200).send(noLogin)
-    // }
+    if (!req.session.user) {
+      return res.status(200).send(noLogin);
+    }
 
     // logging
     if (data.question == "") {
@@ -44,15 +44,13 @@ const getAiCache = async (req, res, next) => {
     }
 
     //Ai call
-    const result = await axios.post("http://61.80.148.34:9000/userQnA", data, {
-      timeout: 5000,
-    });
+    const result = await axios.post("http://61.80.148.34:9000/userQnA", data);
     req.body.msg = result.data;
     next();
   } catch (err) {
     // logger.error("[Server] Error!! aiServer error!!! ===>" + err)
     console.log("[Server] Error!! aiServer error!!! ===>" + err);
-    req.body.msg = -1;
+    req.body.msg = 0;
     next();
   }
 };
@@ -63,9 +61,9 @@ const getInquiryHistoryCache = async (req, res, next) => {
   const memNo = req.body.memNo ? req.body.memNo : 0;
   const noLogin = "-1";
   // login check
-  // if (!req.session.user) {
-  //   return res.status(200).send(noLogin);
-  // }
+  if (!req.session.user) {
+    return res.status(200).send(noLogin);
+  }
 
   if (memNo == 0) {
     req.body.msg = "0";
@@ -143,10 +141,33 @@ const setInquiryCache = async (req, res, next) => {
   }
 };
 
+// History score insert
+const setScoreCache = async (req, res) => {
+  const noLogin = "-1";
+
+  // login check
+  if (!req.session.user) {
+    return res.status(200).send(noLogin);
+  }
+  const data = {
+    No: req.query.No ? req.query.No : 0,
+    score: req.query.score ? req.query.score : 0,
+  };
+
+  const setScore = await qnaUtils.setScore(data);
+  if (setScore === "1") {
+    return res.status(200).send(setScore);
+  } else {
+    req.body.msg = setScore;
+    next();
+  }
+};
+
 module.exports = {
   getQnaListCache,
   getAiCache,
   getInquiryHistoryCache,
   getSingleInquiryCache,
   setInquiryCache,
+  setScoreCache,
 };

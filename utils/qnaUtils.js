@@ -90,10 +90,25 @@ const setInquiry = async (data) => {
 	}
 }
 
+// setScore insert
+const setScore = async (data) => {
+	const { No, score } = data
+	try {
+		const [rows, fields] = await conn.query(
+			`UPDATE inquiryHistory SET score = ${score} WHERE No = ${No}`
+		)
+		connect.release
+		return "1"
+	} catch (err) {
+		console.log("[qnaUtils] Error!! qnaUtils setScore Error!! ===>" + err)
+		return "-2"
+	}
+}
 module.exports = {
 	getQNA,
 	getInquiryHistoryList,
 	getInquiry,
 	setInquiry,
 	ValidateData,
+	setScore,
 }
