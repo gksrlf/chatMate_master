@@ -15,7 +15,7 @@
 
 ### 기술 스택
   - React
-  - TypeScript
+  - JavaScript
   - MySQL
   - Node.Js
   - CAFE24(배포용)
